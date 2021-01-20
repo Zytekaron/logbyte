@@ -7,4 +7,3 @@ db:
     url: 'mongodb+srv://service_key:xxRmxErnkq3pqfEN@production.lskrx.mongodb.net/zytekaron?retryWrites=true&w=majority'
     database: 'zytekaron'
     collection: 'notifs'
-
