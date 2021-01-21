@@ -24,9 +24,8 @@ func router(cfg *types.ConfigServer) http.Handler {
 
 	r.Get("/{id}", notifs.Get)
 	r.Post("/", notifs.Post)
-	//r.Put("/", notifs.Put)
-	r.Patch("/", notifs.Patch)
-	r.Delete("/", notifs.Delete)
+	r.Patch("/{id}", notifs.Patch)
+	r.Delete("/{id}", notifs.Delete)
 
 	return r
 }

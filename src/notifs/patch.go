@@ -16,7 +16,7 @@ func Patch(w http.ResponseWriter, r *http.Request) {
 
 	bytes, err := ioutil.ReadAll(r.Body)
 	if err != nil {
-		write(w, 500, newError("an error occurred whilst reading the request body", nil))
+		write(w, 500, newError("an error occurred whilst reading the request body: "+err.Error(), nil))
 		return
 	}
 

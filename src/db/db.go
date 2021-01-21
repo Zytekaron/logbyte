@@ -2,9 +2,9 @@ package db
 
 import (
 	"context"
-	"go.mongodb.org/mongo-driver/bson"
 	"go.mongodb.org/mongo-driver/mongo"
 	"go.mongodb.org/mongo-driver/mongo/options"
+	"gopkg.in/mgo.v2/bson"
 	"notifs/src/types"
 )
 
@@ -52,14 +52,11 @@ func Insert(notif *types.Notification) (err error) {
 	return
 }
 
-func Patch(id string, body []byte) (data *types.Notification, err error) {
+func Patch(id string, json []byte) (data *types.Notification, err error) {
 	var doc interface{}
-	err = bson.UnmarshalExtJSON(body, true, &doc)
-	if err != nil {
-		return
-	}
+	err = bson.UnmarshalJSON(json, &doc)
 
-	_, err = notifs.UpdateOne(context.Background(), _id(id), doc)
+	_, err = notifs.UpdateOne(context.Background(), _id(id), bson.M{"$set": doc})
 	if err != nil {
 		return
 	}
@@ -67,8 +64,6 @@ func Patch(id string, body []byte) (data *types.Notification, err error) {
 	return Get(id)
 }
 
-func _id(id string) bson.D {
-	return bson.D{
-		{"_id", id},
-	}
+func _id(id string) bson.M {
+	return bson.M{"_id": id}
 }

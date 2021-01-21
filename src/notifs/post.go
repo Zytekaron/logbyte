@@ -6,7 +6,10 @@ import (
 	"net/http"
 	"notifs/src/db"
 	"notifs/src/types"
+	"time"
 )
+
+var hex = []rune("0123456789abcdef")
 
 func Post(w http.ResponseWriter, r *http.Request) {
 	var data *types.Notification
@@ -16,7 +19,8 @@ func Post(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
-	data.Id = random.MustSecureString(12, []rune("0123456789abcdef"))
+	data.Id = random.MustSecureString(12, hex)
+	data.CreatedAt = time.Now().UnixNano() / int64(time.Millisecond)
 
 	err = db.Insert(data)
 	if err != nil {
