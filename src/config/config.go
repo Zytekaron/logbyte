@@ -23,6 +23,6 @@ func Load() (cfg *types.Config, err error) {
 		err = yaml.NewDecoder(file).Decode(&cfg)
 		return
 	}
-	err = errors.New("could not find/open any config files")
-	return
+
+	return nil, errors.New("could not find any config files")
 }

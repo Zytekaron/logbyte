@@ -8,7 +8,6 @@ import (
 	"notifs/src/types"
 )
 
-var db *mongo.Database
 var notifs *mongo.Collection
 
 func Init(config *types.ConfigDb) (db *mongo.Database, err error) {
