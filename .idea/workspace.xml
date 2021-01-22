@@ -10,9 +10,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="167e793b-04cf-40ed-a93e-086314c722e6" name="Default Changelist" comment="update config example">
-      <change beforePath="$PROJECT_DIR$/src/config/config.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/config/config.go" afterDir="false" />
-    </list>
+    <list default="true" id="167e793b-04cf-40ed-a93e-086314c722e6" name="Default Changelist" comment="update config dir to /etc/opt/logbyte.yml" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -116,7 +114,8 @@
     <MESSAGE value="removed workflow" />
     <MESSAGE value="change auth to env" />
     <MESSAGE value="update config example" />
-    <option name="LAST_COMMIT_MESSAGE" value="update config example" />
+    <MESSAGE value="update config dir to /etc/opt/logbyte.yml" />
+    <option name="LAST_COMMIT_MESSAGE" value="update config dir to /etc/opt/logbyte.yml" />
   </component>
   <component name="VgoProject">
     <integration-enabled>true</integration-enabled>
@@ -172,10 +171,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="552" y="249" key="Vcs.Push.Dialog.v2/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1611341101580" />
-    <state x="668" y="237" width="583" height="624" key="find.popup" timestamp="1611337594340">
+    <state x="668" y="237" width="583" height="624" key="find.popup" timestamp="1611342439317">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="668" y="237" width="583" height="624" key="find.popup/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1611337594340" />
+    <state x="668" y="237" width="583" height="624" key="find.popup/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1611342439317" />
     <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1611271656512">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

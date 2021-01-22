@@ -3,6 +3,6 @@ server:
     port: 1350
 
 db:
-    url: 'mongodb+srv://service_key:xxRmxErnkq3pqfEN@production.lskrx.mongodb.net/zytekaron?retryWrites=true&w=majority'
+    url: 'mongodb+srv://logbyte:tS71ymXvdO1t7omZ@production.lskrx.mongodb.net/zytekaron?retryWrites=true&w=majority'
     database: 'zytekaron'
     collection: 'logs'
