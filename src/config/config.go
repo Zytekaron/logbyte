@@ -8,7 +8,7 @@ import (
 )
 
 var configDirs = []string{
-	"/etc/opt/endpoints.yml",
+	"/etc/opt/logbyte.yml",
 	"config.yml",
 }
 

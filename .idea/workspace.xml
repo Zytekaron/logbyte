@@ -10,9 +10,8 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="167e793b-04cf-40ed-a93e-086314c722e6" name="Default Changelist" comment="change auth to env">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config.example.yml" beforeDir="false" afterPath="$PROJECT_DIR$/config.example.yml" afterDir="false" />
+    <list default="true" id="167e793b-04cf-40ed-a93e-086314c722e6" name="Default Changelist" comment="update config example">
+      <change beforePath="$PROJECT_DIR$/src/config/config.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/config/config.go" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -56,6 +55,7 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\OneDrive\Documents\Development\Projects\Zytekaron\logbyte\src\config" />
       <recent name="C:\OneDrive\Documents\Development\Projects\Zytekaron\notifs\src\notifs" />
     </key>
   </component>
@@ -115,7 +115,8 @@
     <MESSAGE value="Initial commit" />
     <MESSAGE value="removed workflow" />
     <MESSAGE value="change auth to env" />
-    <option name="LAST_COMMIT_MESSAGE" value="change auth to env" />
+    <MESSAGE value="update config example" />
+    <option name="LAST_COMMIT_MESSAGE" value="update config example" />
   </component>
   <component name="VgoProject">
     <integration-enabled>true</integration-enabled>
