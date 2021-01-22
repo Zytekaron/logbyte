@@ -10,11 +10,9 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="167e793b-04cf-40ed-a93e-086314c722e6" name="Default Changelist" comment="removed workflow">
+    <list default="true" id="167e793b-04cf-40ed-a93e-086314c722e6" name="Default Changelist" comment="change auth to env">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config.yml" beforeDir="false" afterPath="$PROJECT_DIR$/config.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/server/auth.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/server/auth.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/types/config.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/types/config.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config.example.yml" beforeDir="false" afterPath="$PROJECT_DIR$/config.example.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -116,7 +114,8 @@
     <MESSAGE value="update server routes" />
     <MESSAGE value="Initial commit" />
     <MESSAGE value="removed workflow" />
-    <option name="LAST_COMMIT_MESSAGE" value="removed workflow" />
+    <MESSAGE value="change auth to env" />
+    <option name="LAST_COMMIT_MESSAGE" value="change auth to env" />
   </component>
   <component name="VgoProject">
     <integration-enabled>true</integration-enabled>
@@ -168,10 +167,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="461" y="165" key="SettingsEditor/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1611183880138" />
-    <state x="552" y="249" key="Vcs.Push.Dialog.v2" timestamp="1611338460546">
+    <state x="552" y="249" key="Vcs.Push.Dialog.v2" timestamp="1611341101580">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="552" y="249" key="Vcs.Push.Dialog.v2/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1611338460546" />
+    <state x="552" y="249" key="Vcs.Push.Dialog.v2/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1611341101580" />
     <state x="668" y="237" width="583" height="624" key="find.popup" timestamp="1611337594340">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

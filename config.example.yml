@@ -1,6 +1,5 @@
 server:
     domain: 'example.com'
-    auth: 'passkey for authentication'
     port: 80
 
 db:
