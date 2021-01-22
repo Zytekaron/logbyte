@@ -1,6 +1,5 @@
 server:
     domain: 'log.zytekaron.com'
-    auth: 'sX33TYIgByLZh0AdrZjKUbZyqAywZ211'
     port: 1350
 
 db:

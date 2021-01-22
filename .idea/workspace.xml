@@ -10,7 +10,12 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="167e793b-04cf-40ed-a93e-086314c722e6" name="Default Changelist" comment="Initial commit" />
+    <list default="true" id="167e793b-04cf-40ed-a93e-086314c722e6" name="Default Changelist" comment="removed workflow">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config.yml" beforeDir="false" afterPath="$PROJECT_DIR$/config.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/server/auth.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/server/auth.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/types/config.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/types/config.go" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -110,7 +115,8 @@
     <MESSAGE value="update deps" />
     <MESSAGE value="update server routes" />
     <MESSAGE value="Initial commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="Initial commit" />
+    <MESSAGE value="removed workflow" />
+    <option name="LAST_COMMIT_MESSAGE" value="removed workflow" />
   </component>
   <component name="VgoProject">
     <integration-enabled>true</integration-enabled>
@@ -134,6 +140,10 @@
     </state>
     <state x="549" y="167" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1610530844626" />
     <state x="686" y="211" key="FileChooserDialogImpl/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1611188440472" />
+    <state x="838" y="327" key="Github.ShareDialog" timestamp="1611338314272">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="838" y="327" key="Github.ShareDialog/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1611338314272" />
     <state width="1877" height="275" key="GridCell.Tab.0.bottom" timestamp="1611338187048">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -158,6 +168,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="461" y="165" key="SettingsEditor/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1611183880138" />
+    <state x="552" y="249" key="Vcs.Push.Dialog.v2" timestamp="1611338460546">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="552" y="249" key="Vcs.Push.Dialog.v2/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1611338460546" />
     <state x="668" y="237" width="583" height="624" key="find.popup" timestamp="1611337594340">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

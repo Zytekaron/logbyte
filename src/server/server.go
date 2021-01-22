@@ -11,18 +11,18 @@ import (
 )
 
 func Start(cfg *types.ConfigServer) {
-	handler := router(cfg)
+	handler := router()
 
 	log.Println("Listening on", cfg.Port)
 	err := http.ListenAndServe(":"+strconv.Itoa(cfg.Port), handler)
 	log.Fatal(err)
 }
 
-func router(cfg *types.ConfigServer) http.Handler {
+func router() http.Handler {
 	r := chi.NewRouter()
 
 	r.Use(middleware.Logger)
-	r.Use(auth(cfg))
+	r.Use(auth)
 
 	r.Get("/{id}", endpoints.Get)
 	r.Get("/", endpoints.Batch)

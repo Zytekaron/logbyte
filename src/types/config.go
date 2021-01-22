@@ -9,7 +9,6 @@ type Config struct {
 
 type ConfigServer struct {
 	Domain string `yaml:"domain"`
-	Auth   string `yaml:"auth"`
 	Port   int    `yaml:"port"`
 }
 
