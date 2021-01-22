@@ -3,12 +3,12 @@ package config
 import (
 	"errors"
 	"gopkg.in/yaml.v3"
-	"notifs/src/types"
+	"logbyte/src/types"
 	"os"
 )
 
 var configDirs = []string{
-	"/etc/opt/notifs.yml",
+	"/etc/opt/endpoints.yml",
 	"config.yml",
 }
 

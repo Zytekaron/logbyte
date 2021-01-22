@@ -1,2 +1,5 @@
-# Configuration files
+# Project exclude paths
 config.yml
+
+# Editor & IDE configuration
+.idea

@@ -5,10 +5,10 @@ import (
 	"go.mongodb.org/mongo-driver/mongo"
 	"go.mongodb.org/mongo-driver/mongo/options"
 	"gopkg.in/mgo.v2/bson"
-	"notifs/src/types"
+	"logbyte/src/types"
 )
 
-var notifs *mongo.Collection
+var logbyte *mongo.Collection
 
 func Init(config *types.ConfigDb) (db *mongo.Database, err error) {
 	var client *mongo.Client
@@ -23,12 +23,12 @@ func Init(config *types.ConfigDb) (db *mongo.Database, err error) {
 	}
 
 	db = client.Database(config.Database)
-	notifs = db.Collection(config.Collection)
+	logbyte = db.Collection(config.Collection)
 	return
 }
 
-func Get(id string) (data *types.Notification, err error) {
-	res := notifs.FindOne(context.Background(), _id(id))
+func Get(id string) (data *types.LogEntry, err error) {
+	res := logbyte.FindOne(context.Background(), _id(id))
 	if res.Err() != nil {
 		return
 	}
@@ -37,31 +37,62 @@ func Get(id string) (data *types.Notification, err error) {
 	return
 }
 
-func Delete(id string) (data *types.Notification, err error) {
+func Delete(id string) (data *types.LogEntry, err error) {
 	data, err = Get(id)
 	if err != nil {
 		return
 	}
 
-	_, err = notifs.DeleteOne(context.Background(), _id(id))
+	_, err = logbyte.DeleteOne(context.Background(), _id(id))
 	return
 }
 
-func Insert(notif *types.Notification) (err error) {
-	_, err = notifs.InsertOne(context.Background(), notif)
+func Insert(notif *types.LogEntry) (err error) {
+	_, err = logbyte.InsertOne(context.Background(), notif)
 	return
 }
 
-func Patch(id string, json []byte) (data *types.Notification, err error) {
+func Patch(id string, json []byte) (data *types.LogEntry, err error) {
 	var doc interface{}
 	err = bson.UnmarshalJSON(json, &doc)
 
-	_, err = notifs.UpdateOne(context.Background(), _id(id), bson.M{"$set": doc})
+	_, err = logbyte.UpdateOne(context.Background(), _id(id), bson.M{"$set": doc})
 	if err != nil {
 		return
 	}
 
 	return Get(id)
+}
+
+func Paginate(limit int64, offset int64) ([]*types.LogEntry, error) {
+	opts := options.Find()
+	opts.SetSort(bson.M{"created_at": -1})
+	opts.SetSkip(limit * offset)
+	opts.SetLimit(limit)
+
+	find, err := logbyte.Find(context.Background(), bson.M{}, opts)
+	if err != nil {
+		return nil, err
+	}
+	defer find.Close(context.Background())
+
+	data := make([]*types.LogEntry, 0)
+	for find.Next(context.Background()) {
+		var result *types.LogEntry
+		err = find.Decode(&result)
+		if err != nil {
+			return nil, err
+		}
+
+		data = append(data, result)
+	}
+
+	err = find.Err()
+	return data, err
+}
+
+func Count() (count int64, err error) {
+	return logbyte.CountDocuments(context.Background(), bson.M{})
 }
 
 func _id(id string) bson.M {

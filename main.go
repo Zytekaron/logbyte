@@ -2,10 +2,10 @@ package main
 
 import (
 	"log"
-	"notifs/src/config"
-	"notifs/src/db"
-	"notifs/src/server"
-	"notifs/src/types"
+	"logbyte/src/config"
+	"logbyte/src/db"
+	"logbyte/src/server"
+	"logbyte/src/types"
 )
 
 var cfg *types.Config

@@ -1,10 +1,10 @@
-package notifs
+package endpoints
 
 import (
 	"encoding/json"
 	"log"
+	"logbyte/src/types"
 	"net/http"
-	"notifs/src/types"
 )
 
 func write(w http.ResponseWriter, status int, data *types.Response) {

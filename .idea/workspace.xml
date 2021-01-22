@@ -10,14 +10,25 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="167e793b-04cf-40ed-a93e-086314c722e6" name="Default Changelist" comment="updates">
+    <list default="true" id="167e793b-04cf-40ed-a93e-086314c722e6" name="Default Changelist" comment="update server routes">
+      <change afterPath="$PROJECT_DIR$/.github/workflows/build.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/endpoints/batch.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/types/logentry.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config.yml" beforeDir="false" afterPath="$PROJECT_DIR$/config.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/go.mod" beforeDir="false" afterPath="$PROJECT_DIR$/go.mod" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/go.sum" beforeDir="false" afterPath="$PROJECT_DIR$/go.sum" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/main.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/config/config.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/config/config.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/db/db.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/db/db.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/notifs/patch.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/notifs/patch.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/notifs/post.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/notifs/post.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/notifs/delete.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/endpoints/delete.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/notifs/get.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/endpoints/get.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/notifs/notifs.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/endpoints/notifs.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/notifs/patch.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/endpoints/patch.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/notifs/post.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/endpoints/post.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/server/auth.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/server/auth.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/server/server.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/server/server.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/types/notification.go" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,7 +60,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="go.import.settings.migrated" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../gotil" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -64,21 +75,34 @@
       <recent name="C:\OneDrive\Documents\Development\Projects\Zytekaron\notifs\src\notifs" />
     </key>
   </component>
-  <component name="RunManager">
-    <configuration name="go build notifs" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Go Build.bo guild logbyte (linux)">
+    <configuration name="bo guild logbyte (linux)" type="GoApplicationRunConfiguration" factoryName="Go Application">
+      <module name="notifs" />
+      <working_directory value="$PROJECT_DIR$" />
+      <go_parameters value="-i -o logbyte" />
+      <envs>
+        <env name="GOOS" value="linux" />
+      </envs>
+      <kind value="FILE" />
+      <filePath value="$PROJECT_DIR$/main.go" />
+      <package value="logbite" />
+      <directory value="$PROJECT_DIR$" />
+      <option name="run" value="false" />
+      <method v="2" />
+    </configuration>
+    <configuration name="go build logbite" type="GoApplicationRunConfiguration" factoryName="Go Application" nameIsGenerated="true">
       <module name="notifs" />
       <working_directory value="$PROJECT_DIR$" />
       <kind value="PACKAGE" />
       <filePath value="$PROJECT_DIR$/main.go" />
-      <package value="notifs" />
+      <package value="logbite" />
       <directory value="$PROJECT_DIR$" />
       <method v="2" />
     </configuration>
-    <recent_temporary>
-      <list>
-        <item itemvalue="Go Build.go build notifs" />
-      </list>
-    </recent_temporary>
+    <list>
+      <item itemvalue="Go Build.go build logbite" />
+      <item itemvalue="Go Build.bo guild logbyte (linux)" />
+    </list>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TypeScriptGeneratedFilesManager">
@@ -97,21 +121,28 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Initial commit" />
     <MESSAGE value="update config.yml" />
     <MESSAGE value="updates" />
-    <option name="LAST_COMMIT_MESSAGE" value="updates" />
+    <MESSAGE value="update deps" />
+    <MESSAGE value="update server routes" />
+    <option name="LAST_COMMIT_MESSAGE" value="update server routes" />
   </component>
   <component name="VgoProject">
     <integration-enabled>true</integration-enabled>
   </component>
   <component name="WindowStateProjectService">
-    <state x="752" y="144" key="#YAML" timestamp="1611181067036">
+    <state x="752" y="144" key="#YAML" timestamp="1611337908823">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="752" y="144" key="#YAML/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1611181067036" />
+    <state x="752" y="144" key="#YAML/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1611337908823" />
+    <state x="414" y="175" width="1092" height="739" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1611284178991">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="414" y="175" width="1092" height="739" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1611284178991" />
     <state x="542" y="202" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1610536557214">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -121,37 +152,37 @@
     </state>
     <state x="549" y="167" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1610530844626" />
     <state x="686" y="211" key="FileChooserDialogImpl/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1611188440472" />
-    <state width="1877" height="275" key="GridCell.Tab.0.bottom" timestamp="1611190596429">
+    <state width="1877" height="275" key="GridCell.Tab.0.bottom" timestamp="1611337639880">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1493" height="204" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1610539386795" />
-    <state width="1877" height="275" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1611190596429" />
-    <state width="1877" height="275" key="GridCell.Tab.0.center" timestamp="1611190596429">
+    <state width="1877" height="275" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1611337639880" />
+    <state width="1877" height="275" key="GridCell.Tab.0.center" timestamp="1611337639880">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1493" height="204" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1610539386795" />
-    <state width="1877" height="275" key="GridCell.Tab.0.center/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1611190596429" />
-    <state width="1877" height="275" key="GridCell.Tab.0.left" timestamp="1611190596428">
+    <state width="1877" height="275" key="GridCell.Tab.0.center/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1611337639880" />
+    <state width="1877" height="275" key="GridCell.Tab.0.left" timestamp="1611337639880">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1493" height="204" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1610539386795" />
-    <state width="1877" height="275" key="GridCell.Tab.0.left/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1611190596428" />
-    <state width="1877" height="275" key="GridCell.Tab.0.right" timestamp="1611190596429">
+    <state width="1877" height="275" key="GridCell.Tab.0.left/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1611337639880" />
+    <state width="1877" height="275" key="GridCell.Tab.0.right" timestamp="1611337639880">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1493" height="204" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1610539386795" />
-    <state width="1877" height="275" key="GridCell.Tab.0.right/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1611190596429" />
+    <state width="1877" height="275" key="GridCell.Tab.0.right/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1611337639880" />
     <state x="461" y="165" key="SettingsEditor" timestamp="1611183880138">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="461" y="165" key="SettingsEditor/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1611183880138" />
-    <state x="668" y="237" width="583" height="566" key="find.popup" timestamp="1611185517011">
+    <state x="668" y="237" width="583" height="624" key="find.popup" timestamp="1611337594340">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="668" y="237" width="583" height="566" key="find.popup/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1611185517011" />
-    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1611174496532">
+    <state x="668" y="237" width="583" height="624" key="find.popup/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1611337594340" />
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1611271656512">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1611174496532" />
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1611271656512" />
   </component>
 </project>

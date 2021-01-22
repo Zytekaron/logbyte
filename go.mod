@@ -1,4 +1,4 @@
-module notifs
+module logbyte
 
 go 1.15
 

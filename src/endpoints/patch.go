@@ -1,10 +1,10 @@
-package notifs
+package endpoints
 
 import (
 	"github.com/go-chi/chi"
 	"io/ioutil"
+	"logbyte/src/db"
 	"net/http"
-	"notifs/src/db"
 )
 
 func Patch(w http.ResponseWriter, r *http.Request) {

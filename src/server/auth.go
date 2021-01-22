@@ -1,8 +1,8 @@
 package server
 
 import (
+	"logbyte/src/types"
 	"net/http"
-	"notifs/src/types"
 )
 
 func auth(cfg *types.ConfigServer) func(http.Handler) http.Handler {

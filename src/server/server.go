@@ -4,14 +4,16 @@ import (
 	"github.com/go-chi/chi"
 	"github.com/go-chi/chi/middleware"
 	"log"
+	"logbyte/src/endpoints"
+	"logbyte/src/types"
 	"net/http"
-	"notifs/src/notifs"
-	"notifs/src/types"
 	"strconv"
 )
 
 func Start(cfg *types.ConfigServer) {
 	handler := router(cfg)
+
+	log.Println("Listening on", cfg.Port)
 	err := http.ListenAndServe(":"+strconv.Itoa(cfg.Port), handler)
 	log.Fatal(err)
 }
@@ -22,10 +24,11 @@ func router(cfg *types.ConfigServer) http.Handler {
 	r.Use(middleware.Logger)
 	r.Use(auth(cfg))
 
-	r.Get("/{id}", notifs.Get)
-	r.Post("/", notifs.Post)
-	r.Patch("/{id}", notifs.Patch)
-	r.Delete("/{id}", notifs.Delete)
+	r.Get("/{id}", endpoints.Get)
+	r.Get("/", endpoints.Batch)
+	r.Post("/", endpoints.Post)
+	r.Patch("/{id}", endpoints.Patch)
+	r.Delete("/{id}", endpoints.Delete)
 
 	return r
 }

@@ -1,18 +1,18 @@
-package notifs
+package endpoints
 
 import (
 	"encoding/json"
 	"github.com/zytekaron/gotil/random"
+	"logbyte/src/db"
+	"logbyte/src/types"
 	"net/http"
-	"notifs/src/db"
-	"notifs/src/types"
 	"time"
 )
 
 var hex = []rune("0123456789abcdef")
 
 func Post(w http.ResponseWriter, r *http.Request) {
-	var data *types.Notification
+	var data *types.LogEntry
 	err := json.NewDecoder(r.Body).Decode(&data)
 	if err != nil {
 		write(w, 400, newError("malformed json body", nil))

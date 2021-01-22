@@ -1,9 +1,9 @@
 server:
-    domain: 'notifs.zytekaron.com'
-    auth: '9hcp-pIYMndn7hIjfyDgPa5lueSih5-z'
-    port: 1337
+    domain: 'log.zytekaron.com'
+    auth: 'sX33TYIgByLZh0AdrZjKUbZyqAywZ211'
+    port: 1350
 
 db:
     url: 'mongodb+srv://service_key:xxRmxErnkq3pqfEN@production.lskrx.mongodb.net/zytekaron?retryWrites=true&w=majority'
     database: 'zytekaron'
-    collection: 'notifs'
+    collection: 'logs'
