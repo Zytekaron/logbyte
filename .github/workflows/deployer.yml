@@ -8,5 +8,5 @@ jobs:
     steps:
       - name: Deploy the logging service
         run: |
-          echo Making request to deploy.zytekaron.com/restart/logbyte
-          curl -H "Authorization: ${{ secrets.AUTH }}" https://deploy.zytekaron.com/restart/logbyte
+          echo Making request to deploy.zytekaron.com/logbyte/deploy
+          curl -H "Authorization: ${{ secrets.AUTH }}" https://deploy.zytekaron.com/logbyte/deploy
