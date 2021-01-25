@@ -1,7 +1,5 @@
 package types
 
-import _ "gopkg.in/yaml.v3"
-
 type Config struct {
 	Server *ConfigServer `yaml:"server"`
 	DB     *ConfigDb     `yaml:"db"`
