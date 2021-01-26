@@ -15,8 +15,8 @@ func Batch(w http.ResponseWriter, r *http.Request) {
 	if err != nil {
 		limit = 100
 	}
-	if limit < 1 && limit > 100 {
-		write(w, 400, newError("limit must be between 0 and 100", nil))
+	if limit < 1 {
+		write(w, 400, newError("limit must be greater than zero", nil))
 		return
 	}
 
