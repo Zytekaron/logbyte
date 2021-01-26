@@ -28,9 +28,5 @@ func Post(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
-	type Resp struct {
-		Id string `json:"id"`
-		CA int64  `json:"created_at"`
-	}
-	write(w, 200, newSuccess("created notification", &Resp{Id: data.Id, CA: data.CreatedAt}))
+	write(w, 200, newSuccess("created notification", data))
 }
