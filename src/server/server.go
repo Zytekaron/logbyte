@@ -24,6 +24,7 @@ func router() http.Handler {
 	r.Use(middleware.Logger)
 	r.Use(auth)
 
+	r.Get("/count", endpoints.Count)
 	r.Get("/{id}", endpoints.Get)
 	r.Get("/", endpoints.Batch)
 	r.Post("/", endpoints.Post)
