@@ -28,5 +28,5 @@ func Post(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
-	types.NewSuccess("created notification", 0, nil).Write(w, 200)
+	types.NewSuccess("created notification", 0, data).Write(w, 200)
 }
