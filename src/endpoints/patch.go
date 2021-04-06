@@ -4,27 +4,28 @@ import (
 	"github.com/go-chi/chi"
 	"io/ioutil"
 	"logbyte/src/db"
+	"logbyte/src/types"
 	"net/http"
 )
 
 func Patch(w http.ResponseWriter, r *http.Request) {
 	id := chi.URLParam(r, "id")
 	if id == "" {
-		write(w, 400, newError("id parameter left empty", nil))
+		types.NewError("id parameter left empty", 0).Write(w, 400)
 		return
 	}
 
 	bytes, err := ioutil.ReadAll(r.Body)
 	if err != nil {
-		write(w, 500, newError("an error occurred whilst reading the request body: "+err.Error(), nil))
+		types.NewError("an error occurred whilst reading the request body: "+err.Error(), 0).Write(w, 500)
 		return
 	}
 
 	data, err := db.Patch(id, bytes)
 	if err != nil {
-		write(w, 500, newError("error whilst updating database: "+err.Error(), nil))
+		types.NewError("error whilst updating database: "+err.Error(), 0).Write(w, 500)
 		return
 	}
 
-	write(w, 200, newSuccess("", data))
+	types.NewSuccess("", 0, data).Write(w, 200)
 }

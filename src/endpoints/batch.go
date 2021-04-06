@@ -2,6 +2,7 @@ package endpoints
 
 import (
 	"logbyte/src/db"
+	"logbyte/src/types"
 	"net/http"
 	"strconv"
 )
@@ -16,7 +17,7 @@ func Batch(w http.ResponseWriter, r *http.Request) {
 		limit = 100
 	}
 	if limit < 1 {
-		write(w, 400, newError("limit must be greater than zero", nil))
+		types.NewError("limit must be greater than zero", 0).Write(w, 400)
 		return
 	}
 
@@ -25,15 +26,15 @@ func Batch(w http.ResponseWriter, r *http.Request) {
 		offset = 0
 	}
 	if offset < 0 {
-		write(w, 400, newError("limit must be greater than or equal to zero", nil))
+		types.NewError("limit must be greater than or equal to zero", 0).Write(w, 400)
 		return
 	}
 
 	data, err := db.Paginate(limit, offset)
 	if err != nil {
-		write(w, 400, newError("could not load log entries: "+err.Error(), nil))
+		types.NewError("could not load log entries: "+err.Error(), 0).Write(w, 400)
 		return
 	}
 
-	write(w, 200, newSuccess("", data))
+	types.NewSuccess("", 0, data).Write(w, 200)
 }

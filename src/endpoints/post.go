@@ -15,7 +15,7 @@ func Post(w http.ResponseWriter, r *http.Request) {
 	var data *types.LogEntry
 	err := json.NewDecoder(r.Body).Decode(&data)
 	if err != nil {
-		write(w, 400, newError("malformed json body", nil))
+		types.NewError("malformed json body", 0).Write(w, 400)
 		return
 	}
 
@@ -24,9 +24,9 @@ func Post(w http.ResponseWriter, r *http.Request) {
 
 	err = db.Insert(data)
 	if err != nil {
-		write(w, 500, newError("could not insert document: "+err.Error(), nil))
+		types.NewError("could not insert document: "+err.Error(), 0).Write(w, 500)
 		return
 	}
 
-	write(w, 200, newSuccess("created notification", data))
+	types.NewSuccess("created notification", 0, nil).Write(w, 200)
 }
